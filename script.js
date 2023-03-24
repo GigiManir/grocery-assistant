@@ -119,7 +119,7 @@ input.addEventListener("change", function () {
     var text = reader.result;
 
     // split the text into an array of values
-    var values = text.split("\n");
+    var values = text.split(/\r\n|\n|\r/);
     for(let i=0; i<values.length; i++){
         let obj={
             nome: values[i].split(",")[0],
