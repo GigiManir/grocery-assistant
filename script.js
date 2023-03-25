@@ -168,7 +168,7 @@ input.addEventListener("change", function () {
     var values = text.split(/\r\n|\n|\r/);
     for(let i=0; i<values.length; i++){
         let obj={
-            nome: values[i].split(",")[0],
+            nome: values[i].split(",")[0].toLowerCase(),
             quantità: values[i].split(",")[1]
         }
         ingredienti_posseduti.push(obj);
